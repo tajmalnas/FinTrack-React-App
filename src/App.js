@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import Auth from './pages/Auth';
+import Cookies from 'universal-cookie';
+import Home from './pages/Home';
+import NavBar from './components/NavBar';
+const cookies = new Cookies();
 
 function App() {
+
+  const [isAuth, setIsAuth] = useState(cookies.get("auth-token"));
+
+  if (!isAuth) {
+    return (
+      <div className="login">
+        <Auth setIsAuth={setIsAuth} />
+      </div>
+    );
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <Home/>
     </div>
   );
 }
