@@ -4,7 +4,7 @@ import './App.css';
 import Auth from './pages/Auth';
 import Cookies from 'universal-cookie';
 import Home from './pages/Home';
-import NavBar from './components/NavBar';
+import NavBar from './components/home/NavBar';
 const cookies = new Cookies();
 
 function App() {

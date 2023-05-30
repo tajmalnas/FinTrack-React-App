@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeC from '../components/HomeC'
+import HomeC from '../components/home/HomeC'
 
 const Home = () => {
   return (
