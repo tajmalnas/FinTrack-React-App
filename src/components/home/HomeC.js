@@ -10,10 +10,10 @@ const HomeC = () => {
           <h1>
             FinTrack is a Personal Finance Tracker
           </h1>
-          <br />
           <h4>
             We can help you track your expenses and income to help you make better financial decisions. This can help you save money and achieve your financial goals.
           </h4>
+          <button className='butt' >Let's Go</button>
         </header>
         <div className="content-container">
           <motion.div

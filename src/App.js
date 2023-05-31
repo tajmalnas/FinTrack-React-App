@@ -1,10 +1,11 @@
-
+import { Route, Routes } from "react-router-dom"
 import { useState } from 'react';
 import './App.css';
 import Auth from './pages/Auth';
 import Cookies from 'universal-cookie';
 import Home from './pages/Home';
 import NavBar from './components/home/NavBar';
+import Expense from "./pages/Expense";
 const cookies = new Cookies();
 
 function App() {
@@ -22,7 +23,10 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <Home/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/expenses" element={ <Expense/> } />
+      </Routes>
     </div>
   );
 }
