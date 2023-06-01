@@ -1,0 +1,40 @@
+.expense {
+    display: flex;
+    height: 150vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to bottom right, #ee4343, #ec83a6);
+}
+
+.add-expense-but {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 180px;
+    background-color: #f16464;
+    color: white;
+    box-shadow: 0 1px 9px rgb(180, 52, 52);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .expense {
+        display: flex;
+        align-items: center;
+        height: 200;
+        width: 112.5vw;
+    }
+}
+
+.expenses-list {
+    list-style: none;
+    padding: 0;
+}

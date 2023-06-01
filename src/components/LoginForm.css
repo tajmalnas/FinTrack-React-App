@@ -6,13 +6,13 @@
   }
   
   .maincontainer {
-    background-color: rgba(245, 245, 245, 0.8); /* Set the background color with some transparency */
+    background-color: rgba(245, 245, 245, 0.973);
     border-radius: 8px;
     padding: 50px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease;
-    backdrop-filter: blur(4px); /* Apply a blur effect to the container */
+    
 }
 
   
