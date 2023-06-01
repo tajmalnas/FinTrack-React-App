@@ -48,6 +48,14 @@
   cursor: pointer;
 }
 
+.butt1:hover{
+  scale: 1.1;
+}
+
+.butt2:hover{
+  scale: 1.1;
+}
+
 .expense-item-butt {
   display: flex;
   flex-direction: column;

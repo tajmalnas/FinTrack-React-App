@@ -9,6 +9,8 @@ const Expense = (props) => {
 
     const [formOpen, setFormOpen] = useState(false);
 
+    const [isDeleted, setIsDeleted] = useState(false);
+
     const [expenseList, setExpenseList] = useState([]);
     const expenseRef = collection(db, "expenses");
 
@@ -23,7 +25,7 @@ const Expense = (props) => {
         }
         );
         return () => unsub();
-    }, [])
+    }, [isDeleted])
 
     const onCancel = () => {
         setFormOpen(false);
@@ -47,7 +49,7 @@ const Expense = (props) => {
 
             <div className='expense-lists'>
                 <ul className='expenses-list'>
-                    {expenseList.map(expense => (<ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} />))}
+                    {expenseList.map(expense => (<ExpenseItem key={expense.id} id={expense.id} title={expense.title} amount={expense.amount} date={expense.date} setIsDeleted={setIsDeleted} />))}
                 </ul>
             </div>
 
