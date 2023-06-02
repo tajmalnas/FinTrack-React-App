@@ -4,6 +4,7 @@ import './EditModal.css'
 import { Fragment } from 'react'
 import { db } from '../../firebase-config/FirebaseConfig'
 import { doc, updateDoc } from 'firebase/firestore';
+import { toast } from 'react-toastify'
 
 const EditModal = (props) => {
 
@@ -12,6 +13,10 @@ const EditModal = (props) => {
     const [date, setDate] = useState(props.date || '');
 
     const onUpdated = async (id) => {
+        toast.success( "Your Expense Is Updated Now",{
+            position: "top-center",
+            autoClose: 1500,
+        });
         const updatedExpense = doc(db, "expenses", id);
         await updateDoc(updatedExpense, {
             title: title,
