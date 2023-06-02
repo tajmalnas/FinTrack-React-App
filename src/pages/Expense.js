@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import './Expenses.css'
 import Form from '../components/expenseComp/Form'
@@ -42,17 +43,26 @@ const Expense = (props) => {
         setEdit(false);
     }
 
+    const [id,setId]=useState('');
+    const [title,setTitle]=useState('');
+    const [amount,setAmount]=useState('');
+    const [date,setDate]=useState('');
+
     const editStatus = (id,title,amount,date) => {
         setEdit(true);
         console.log(id);
+        setId(id);
         console.log(title);
-        console.log(amount); //I left here will do it later
+        setTitle(title);
+        console.log(amount);
+        setAmount(amount);
         console.log(date);
+        setDate(date);
       };
 
     return (
         <>
-        {edit && <EditModal title={"hi"} message={"error.message"} onConfirm={editHandler} />}
+        {edit && <EditModal id={id} title={title} amount={amount} date={date} onConfirm={editHandler} />}
         <section className='expense'>
             <button className='add-expense-but' onClick={() => { setFormOpen(true) }} >Add Expense</button>
             {

@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import './HomeC.css';
 
 const HomeC = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className='main'>
       <section className='page1'>
@@ -13,7 +17,7 @@ const HomeC = () => {
           <h4>
             We can help you track your expenses and income to help you make better financial decisions. This can help you save money and achieve your financial goals.
           </h4>
-          <button className='butt' >Let's Go</button>
+          <button className='butt' onClick={()=>{navigate('/expense')}} >Let's Go</button>
         </header>
         <div className="content-container">
           <motion.div

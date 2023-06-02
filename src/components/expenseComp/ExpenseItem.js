@@ -13,22 +13,22 @@ const ExpenseItem = (props) => {
     props.setIsDeleted(true);
   };
 
-  const onEdit = (id,title,amount,date) => {
+  const onEdit = (id, title, amount, date) => {
     console.log(id);
-    props.onEditStatusChanged(id,title,amount,date);
+    props.onEditStatusChanged(id, title, amount, date);
   }
 
   return (
     <li>
-    <Card className='expense-item'>
-      <ExpenseDate date={props.date} />
-      <h2>{props.title}</h2>
+      <Card className='expense-item'>
+        <ExpenseDate date={props.date} />
+        <h2>{props.title}</h2>
         <div className='expense-item__price'>Rs {props.amount}</div>
         <div className='expense-item-butt'>
-          <button className="butt1" onClick={()=>onDelete(props.id)}><i className="pi pi-trash" style={{ fontSize: '1.25rem' ,color:'darkred' }}></i></button>
-          <button className="butt2" onClick={()=>onEdit(props.id,props.title,props.amount,props.date)}><i className="pi pi-user-edit" style={{ fontSize: '1.25rem',color:'purple' }}></i></button>
-      </div>
-    </Card>
+          <button className="butt1" onClick={() => onDelete(props.id)}><i className="pi pi-trash" style={{ fontSize: '1.25rem', color: 'darkred' }}></i></button>
+          <button className="butt2" onClick={() => onEdit(props.id, props.title, props.amount, props.date)}><i className="pi pi-user-edit" style={{ fontSize: '1.25rem', color: 'purple' }}></i></button>
+        </div>
+      </Card>
     </li>
   )
 }
