@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './App.css';
 import 'primeicons/primeicons.css';
 import Auth from './pages/Auth';
@@ -18,6 +18,7 @@ const cookies = new Cookies();
 function App() {
   const [isAuth, setIsAuth] = useState(cookies.get('auth-token'));
   const location = useLocation();
+  const nodeRef = useRef(null); 
 
   if (!isAuth) {
     return (
@@ -32,13 +33,15 @@ function App() {
       <ToastContainer />
       <NavBar />
       <TransitionGroup>
-        <CSSTransition key={location.key} classNames='fade' timeout={300}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/expense' element={<Expense />} />
-            <Route path='/pro' element={<Pro />} />
-            <Route path='/about' element={<About />} />
-          </Routes>
+        <CSSTransition key={location.key} classNames='fade' timeout={300} nodeRef={nodeRef}>
+          <div ref={nodeRef}>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/expense' element={<Expense />} />
+              <Route path='/pro' element={<Pro />} />
+              <Route path='/about' element={<About />} />
+            </Routes>
+          </div>
         </CSSTransition>
       </TransitionGroup>
     </div>
