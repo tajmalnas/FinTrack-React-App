@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-    
+    background: linear-gradient(to bottom right, #ee4343, #ec83a6);
 }
 
 .add-expense-but {
@@ -34,8 +34,8 @@
     .expense {
         display: flex;
         align-items: center;
-        height: 112.5vh;
-        width: 112.5vw;
+        min-height: 115vh;
+        min-width: 123.5vw;
     }
 }
 

@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    width: 100vw;
     background: linear-gradient(to bottom right, #ee4343, #ec83a6);
   }
   
@@ -72,8 +72,8 @@
   
   @media (max-width: 768px) {
     .pro-page {
-      height: 110vh;
-      width: 112.7vw;
+      min-height: 115vh;
+      min-width: 123.5vw;
     }
   
     .feature-list {
@@ -84,6 +84,6 @@
     }
     .lottie-animation{
       width: 100px;
-    height: 100px;
+      height: 100px;
     }
   }

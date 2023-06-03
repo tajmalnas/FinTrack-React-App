@@ -86,6 +86,6 @@
     }
 
     .navbar {
-        width: 112.5vw;
+        min-width: 123.5vw;
     }
 }
