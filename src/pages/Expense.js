@@ -6,6 +6,8 @@ import { auth, db } from '../firebase-config/FirebaseConfig';
 import ExpenseItem from '../components/expenseComp/ExpenseItem';
 import EditModal from '../components/edit/EditModal';
 import Chart from '../components/Charts/Chart';
+import Lottie from 'lottie-react'
+import animationData from '../assets/58861-piggy-bank-coins-out.json'
 
 const Expense = (props) => {
     const [formOpen, setFormOpen] = useState(false);
@@ -76,6 +78,9 @@ const Expense = (props) => {
         <>
             {edit && <EditModal id={id} title={title} amount={amount} date={date} onConfirm={editHandler} />}
             <section className='expense'>
+                <div className='animation-with-button'>
+                    <Lottie animationData={animationData} />
+                </div>
                 <button className='add-expense-but' onClick={() => setFormOpen(true)}>
                     Add Expense
                 </button>

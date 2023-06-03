@@ -1,14 +1,17 @@
 import React from 'react';
 import './Pro.css'; 
-
+import Lottie from 'lottie-react'
+import animationData from '../assets/21192-premium-gold.json'
 const ProPage = () => {
+
   return (
     <div className="pro-page">
-      <div className="pro-content">
-      {/* Add something animating like lotifi */}
+     <div className='lottie-animation'>
+      <Lottie animationData={animationData} />
+      </div>
+      <div className="pro-content">     
         <h2>Pro is Coming Soon!</h2>
         <p>Unlock premium features to take your personal finance tracking to the next level.</p>
-
         <div className="feature-list">
           <div className="feature">
             <h3>Advanced Budgeting</h3>

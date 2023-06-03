@@ -44,6 +44,13 @@ input {
   justify-content: flex-end;
 }
 
+button{
+  border-radius: 10%;
+  background-color: #fd5353;
+  color: white;
+
+}
+
 @media (min-width: 768px) {
   .modal {
     left: calc(50% - 20rem);
