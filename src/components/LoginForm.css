@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 100vh; /* Use min-height instead of height */
+  min-height: 100vh; 
 }
 
 .maincontainer {
