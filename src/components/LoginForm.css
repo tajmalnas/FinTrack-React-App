@@ -1,18 +1,20 @@
 .auth {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-  }
-  
-  .maincontainer {
-    background-color: rgba(245, 245, 245, 0.973);
-    border-radius: 8px;
-    padding: 50px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.3s ease;
-    
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh; /* Use min-height instead of height */
+}
+
+.maincontainer {
+  margin-top: 30%;
+  background-color: rgba(245, 245, 245, 0.973);
+  border-radius: 8px;
+  padding: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+  max-width: 400px;
+  width: 100%; 
 }
 
   
@@ -27,7 +29,7 @@
   }
   
   .mainloginbut {
-    background-color: #4285f4;
+    background-color: #f37979;
     color: white;
     border: none;
     border-radius: 4px;
@@ -37,6 +39,6 @@
   }
   
   .mainloginbut:hover {
-    background-color: #3367d6;
+    background-color: #d36262;
   }
   
