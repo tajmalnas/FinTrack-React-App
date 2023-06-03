@@ -1,0 +1,66 @@
+.about {
+    display: flex;
+    height: 100%;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to bottom right, #ee4343, #ec83a6);
+}
+
+.about h2 {
+    color: black;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+.growth-graph {
+    opacity: 0.8;
+    height: 400px;
+    width: 400px;
+}
+
+.future-plans-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  .plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .plan-item {
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color:transparent;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #faf6f6;
+  }
+  
+  .plan-item:hover {
+    transform: scale(1.1);
+  }
+
+@media (max-width: 768px) {
+    .about {
+        display: flex;
+        align-items: center;
+        height: 105vh;
+        width: 112.5vw;
+    }
+}
