@@ -1,0 +1,34 @@
+.chart {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: transparent;
+    padding: 10px;
+  }
+  
+  .bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 40px;
+    background-color: #c01154a8;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border:2px solid rgb(224, 93, 93);
+  }
+  
+  .month {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+  }
+  
+  .label {
+    text-align: center;
+    color: #fff;
+    background-color: #0e0000;
+    padding: 5px;
+    font-weight: bold;
+  }
+  

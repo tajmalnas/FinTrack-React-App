@@ -9,6 +9,7 @@ import NavBar from './components/home/NavBar';
 import Expense  from './pages/Expense';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Pro from './pages/Pro';
 const cookies = new Cookies();
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/expense' element={<Expense />} /> 
+        <Route path='/pro' element={ <Pro/> } />
       </Routes>
     </div>
   );
